@@ -6,7 +6,7 @@ Dictionary Value Finder
 
 Recursively searches a dictionary for a target key and returns all corresponding values.
 
-The real value of this small script is the findkeys() functions, which has proven extremely useful when baked into Rapid7 Workflows and other code bases.
+The real value of this small script is the findkeys() functions, which has proven extremely useful when baked into Rapid7 Workflows and other codebases.
 
 # Prerequisites
 
