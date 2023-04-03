@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*-
 
 """
-Dictionary Value Finder, Version 0.2-Beta (Dop Not Distribute)
+Dictionary Value Finder, Version 0.2.1-Beta (Dop Not Distribute)
 By Rick Pelletier (galiagante@gmail.com), 09 November 2022
-Last Update: 01 April 2023
+Last Update: 03 April 2023
 
 The new implementation should be more efficient and easier to read and maintain.
 Changes to 'findkeys()' made in this version include:
@@ -57,15 +57,16 @@ if __name__ == '__main__':
     try:
         with open(args.file) as json_data:
             d = json.load(json_data)
+
+            if (results := findkeys(d, args.key)):
+                print(results)
+                print(f'{len(results)} matches found')
+            else:
+                print('No data')
+
     except IOError as e:
         print(e)
         exit_value = 1
-
-    if (results := findkeys(d, args.key)):
-        print(results)
-        print(f'{len(results)} matches found')
-    else:
-        print('No data')
 
     sys.exit(exit_value)
 else:
