@@ -8,6 +8,8 @@ Recursively searches a dictionary for a target key and returns all corresponding
 
 The real value of this small script is the findkeys() functions, which has proven extremely useful when baked into workflows and other code bases.
 
+It is noteworthy that the object returned (a generator) can be subject to iterations, but functions like 'len()' will not work due to the arbitrary nature of generator objects (or nearly anything that uses "lazy evaluation" techniques).
+
 ## Prerequisites
 
 Requires Python 3.x (preferably 3.7+) and uses the following (entirely standard) libraries:
